@@ -1,0 +1,11 @@
+*.pyc
+session_config.txt
+ros_conf.py
+Doxyfile.in
+output_docs/*
+docs_sphinx/*
+_build/*
+test_cpp/*
+test_py/*
+.coverage
+htmlcov/

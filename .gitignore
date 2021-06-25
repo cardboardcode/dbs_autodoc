@@ -9,3 +9,5 @@ test_cpp/*
 test_py/*
 .coverage
 htmlcov/
+test_pytest/__pycache__/*
+dbsautodoc_library/__pycache__/*

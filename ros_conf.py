@@ -21,9 +21,9 @@ subprocess.call('doxygen Doxyfile.in', shell=True)
 
 # -- Project information -----------------------------------------------------
 
-project =                                           'default_project_name'
-copyright = '2021,                                           default_author_name'
-author = 'default_author_name'
+project =                                           'Book of Gary'
+copyright = '2021,                                           Gary'
+author = 'Gary'
 
 
 # -- General configuration ---------------------------------------------------
@@ -89,7 +89,7 @@ html_static_path = ['_static']
 # -- Breathe configuration -------------------------------------------------
 
 breathe_projects = {
-	"default_project_name":                                           "../_build/xml/"
+	"Book of Gary":                                           "../_build/xml/"
 }
-breathe_default_project =                                           "default_project_name"
+breathe_default_project =                                           "Book of Gary"
 breathe_default_members = ('members', 'undoc-members')

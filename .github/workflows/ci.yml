@@ -9,7 +9,8 @@ jobs:
       matrix:
         python-version: [3.6, 3.7, 3.8, 3.9]
     env:
-      DISPLAY: ':99.0'
+      QT_QPA_PLATFORM: "offscreen"
+      CODECOV_TOKEN: "521b4cfc-cb50-4316-b769-e9d43d2508c3"
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
@@ -34,4 +35,5 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y wget curl doxygen
           cp -r dbsautodoc_library/ test_pytest/
-          pytest --cov-report term-missing --cov=dbsautodoc_library.rosdoccmd  test_pytest/test_run_app.py
+          pytest --cov-report term-missing --cov=dbsautodoc_library.rosdoccmd  test_pytest/test_run_app.py --cov-report=xml
+          bash <(curl -s https://codecov.io/bash)

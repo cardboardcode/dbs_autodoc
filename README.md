@@ -104,3 +104,14 @@ Place the following line in front of major code blocks in C++.
 An example is provided under `test/example_cpp.hpp`
 
 For further details, please refer to [this link](https://www.doxygen.nl/manual/docblocks.html
+
+## **Testing**
+:warning:
+This section allows you to test whether the **Graphical User Interface** (GUI) works on your local workstation. Due to limitation in how **Continuous Integration** (CI) allows testing to be done for a GUI-based python program, the **unit testing for the GUI** in dbs_autodoc is **not included**.
+```bash
+pip install --user pytest pytest-qt pytest-cov
+python -m pytest --cov-report term-missing --cov=dbsautodoc_library.rosdocgui  test_pytest/test_run_gui.py
+```
+
+## **Acknowledgement**
+Credits to **[ROS-Industrial Consortium Asia Pacific](https://rosindustrial.org/ric-apac)** for providing the opportunity and industrial resources used in developing and testing this project.

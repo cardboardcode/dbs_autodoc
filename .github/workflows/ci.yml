@@ -4,12 +4,12 @@ on: [push, pull_request]
 
 jobs:
   build:
-
     runs-on: ubuntu-20.04
     strategy:
       matrix:
         python-version: [3.6, 3.7, 3.8, 3.9]
-
+    env:
+      DISPLAY: ':99.0'
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
@@ -20,7 +20,18 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y python3-pip
+          sudo apt-get install -y wget curl doxygen
           sudo python -m pip install pycodestyle
-      - name: CI
+      - name: Static Analysis
         run: |
           pycodestyle --show-source dbsautodoc_library/rosdocgui.py dbsautodoc_library/rosdoccmd.py test_pytest/test_run_app.py test_pytest/test_run_gui.py run_app.py --count
+      - name: Dynamic Analysis
+        run: |
+          pip install pytest pytest-qt pytest-cov
+          pip install PyQt5 pyside2
+          pip install sphinx-sitemap sphinx-rtd-theme
+          pip install breathe
+          sudo apt-get update
+          sudo apt-get install -y wget curl doxygen
+          cp -r dbsautodoc_library/ test_pytest/
+          pytest --cov-report term-missing --cov=dbsautodoc_library.rosdoccmd  test_pytest/test_run_app.py

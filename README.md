@@ -1,5 +1,5 @@
 ![](img/function.png)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![CI](https://github.com/cardboardcode/dbs_autodoc/actions/workflows/ci.yml/badge.svg)](https://github.com/cardboardcode/dbs_autodoc/actions/workflows/ci.yml) [![codecov](https://codecov.io/gh/cardboardcode/dbs_autodoc/branch/main/graph/badge.svg?token=JM8V8SZE8T)](https://codecov.io/gh/cardboardcode/dbs_autodoc)
+[![CI](https://github.com/cardboardcode/dbs_autodoc/actions/workflows/ci.yml/badge.svg)](https://github.com/cardboardcode/dbs_autodoc/actions/workflows/ci.yml) [![codecov](https://codecov.io/gh/cardboardcode/dbs_autodoc/branch/main/graph/badge.svg?token=JM8V8SZE8T)](https://codecov.io/gh/cardboardcode/dbs_autodoc) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 
 ## **What is This?**
 
